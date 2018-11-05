@@ -1,0 +1,36 @@
+page-apagaimovel {
+  ion-card {
+       position: relative;
+      text-align: center;
+    }
+
+    .card-title {
+      position: absolute;
+      top: 36%;
+      font-size: 2.0em;
+      width: 100%;
+      font-weight: bold;
+    }
+    .escurecer{
+      position: relative;
+      opacity: 0.6;
+      filter: alpha(opacity=60);
+      background-color:rgba(0,0,0,0.7);
+    }
+  .card-subtitle{
+    position: absolute;
+      top: 82%;
+      font-size: 1.0em;
+      width: 100%;
+      font-weight: bold
+  }
+  .titulo{
+    font-weight: bold;
+    font-size: 1.9em;
+    color: color($colors, primary-text-color);
+  }
+  .aviso{
+    padding: 10px;
+    color: red;
+  }
+}

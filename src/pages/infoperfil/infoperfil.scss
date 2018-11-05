@@ -1,0 +1,38 @@
+page-infoperfil {
+  .bg-color{
+      background-color: #fcfcfc;
+  }
+
+  .card-user{
+      margin-top: 0vh;
+      border-radius: 30px
+  }
+  .imagemUser{
+      border-radius: 70%;
+      height: 200px;
+      width: 200px;
+      margin: 0 auto;
+      margin-top: 2vh
+  }
+  .cards-info{
+      width: 90%;
+      margin: 0 auto;
+      border-radius: 30px;
+  }
+  .texto-card{
+      margin: 10px;
+  }
+
+  .hover:hover{
+      padding: 10px
+  }
+  .separator{
+      margin-top: 10px;
+      padding: 1px;
+      background-color: teal;
+      border-radius: 10px;
+      width: 100%;
+      position: relative;
+  }
+
+}

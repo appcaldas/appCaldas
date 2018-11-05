@@ -1,0 +1,28 @@
+<ion-content class=" no-scroll">
+  <ion-card class="logItem card">
+    <ion-card-header>
+      <ion-title text-center>Espaço 10</ion-title>
+    </ion-card-header>
+    <ion-list>
+      <ion-item>
+        <ion-label>
+          <ion-icon name="person"></ion-icon>
+        </ion-label
+        ><ion-input placeholder="Login" [(ngModel)]="model.login" > </ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label>
+              <ion-icon name="lock"></ion-icon>
+          </ion-label>
+        <ion-input placeholder="Senha" [(ngModel)]="model.senha" type="password"> </ion-input>
+      </ion-item>
+      <ion-item>
+        <button ion-button block (click)="login()" padding style="border-radius: 20px; font-size: 14px;">
+          <ion-icon name='log-in'></ion-icon>
+        &nbsp;Entrar
+        </button>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <div class="bgImg"></div>
+</ion-content>

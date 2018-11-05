@@ -1,0 +1,44 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar color="primary">
+
+      <ion-grid>
+        <ion-row>
+          <ion-col col-4>
+            <div class="avatar-format">
+              <ion-icon name="contact" color="light" padding-left></ion-icon>
+            </div>
+          </ion-col>
+          <ion-col col-8>
+            <div class="avatar-text">
+              <span>Administrador</span>
+            </div>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <button ion-button outline small block color="light" menuClose class="btn-logout" (click)="exitApp()">
+              <ion-icon name="exit"></ion-icon>
+              <span>Sair</span>
+            </button>
+          </ion-col>
+        </ion-row>
+
+      </ion-grid>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="bg-content">
+    <ion-list>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+      <ion-icon [name]="p.icon" color="primary-color-light"></ion-icon>
+      <span> {{ p.title }} </span>
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

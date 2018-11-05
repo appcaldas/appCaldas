@@ -1,0 +1,21 @@
+page-descricao-ap {
+
+  // style for slider
+ion-slides.to-top {
+  height: auto;
+  margin-bottom: -5px;
+
+  .swiper-pagination {
+    display: block !important;
+
+    .swiper-pagination-bullet {
+      background: color($colors, primary);
+    }
+  }
+}
+
+.to-top {
+  height: auto;
+  margin-bottom: -5px;
+  }
+}

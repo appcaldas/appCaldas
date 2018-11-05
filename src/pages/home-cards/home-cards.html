@@ -1,0 +1,46 @@
+<ion-header>
+
+  <ion-navbar class="header" color="primary">
+    <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    <ion-title text-uppercase>Apartamentos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="card-background-page no-scroll">
+  <!-- cards apartamentos -->
+  <ion-item *ngFor="let apart of apart" tappable (click)="pushDesc(apart.id)">
+    <ion-card>
+      <img [src]="apart.thumb" alt=""/>
+      <div class="card-title">
+        <h5>{{ apart.name }}</h5>
+      </div>
+      <div class="card-subtitle align-bottom">
+
+        <ion-grid no-padding>
+          <ion-row>
+            <ion-col col-4>
+                <ion-icon name="home" class="card-text" >
+                  <span> {{ apart.tipo }} </span>
+                </ion-icon>
+            </ion-col>
+            <ion-col col-4>
+                <ion-icon name="trending-down" class="card-text">
+                  <span> {{ apart.area }} m² </span>
+                </ion-icon>
+            </ion-col>
+            <ion-col col-4>
+                <ion-icon name="filing" class="card-text">
+                  <span> {{ apart.qtd_quartos }} </span>
+                </ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-card>
+</ion-item>
+
+</ion-content>

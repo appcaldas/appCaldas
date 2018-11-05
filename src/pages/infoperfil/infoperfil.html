@@ -1,0 +1,81 @@
+<ion-header>
+
+    <ion-navbar color="primary">
+      <ion-title text-uppercase>Informações do Perfil</ion-title>
+    </ion-navbar>
+
+  </ion-header>
+
+
+  <ion-content padding class="bg-color">
+      <ion-fab  right edge top>
+          <button color='primary-color-light' ion-fab mini (click)="mudapage()">
+            <ion-icon name="md-create" color="light"></ion-icon>
+          </button>
+      </ion-fab>
+    <ion-card class="card-user">
+      <img src="../../assets/imgs/user.png" class="imagemUser" />
+      <ion-card-content>
+        <ion-card-title text-center>
+            <ion-title>
+               <ion-icon name='ios-at-outline'></ion-icon> Usuário Teste
+            </ion-title>
+          </ion-card-title>
+        <p text-center>
+          Esse é o seu perfil de usuário, aqui você pode ver e editar suas informações de cadastro.
+        </p>
+      </ion-card-content>
+    </ion-card>
+    <ion-card class="cards-info">
+      <ion-card-header>
+        <ion-title text-center>
+          <ion-icon name='ios-information-circle-outline'></ion-icon>
+           Informações de cadastro
+        </ion-title>
+        <div class="separator"> </div>
+      </ion-card-header>
+      <ion-card-content class="texto-card">
+        <ion-row>
+         <ion-col class='hover'>
+          <b>Nome</b>: Usuário Teste
+         </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class='hover'>
+            <b>Data de Nascimento:</b> 17/01/1990
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class='hover'>
+              <b>CPF:</b> 109.023.447-88
+            </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col class='hover' class='hover'>
+                <b>RG:</b> MG-16798299
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class='hover'>
+                <b>Email:</b> user.teste@app.com
+              </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col class='hover'>
+                  <b>Telefone:</b> (99) 9 9999-9999
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col class='hover'>
+                    <b>Uf:</b> Distrito Fedeal
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col class='hover'>
+                      <b>Cidade:</b> Brasília
+                    </ion-col>
+                  </ion-row>
+      </ion-card-content>
+    </ion-card>
+
+  </ion-content>

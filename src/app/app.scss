@@ -1,0 +1,175 @@
+ion-menu {
+  ion-content {
+    background: color($colors, light) !important;
+  }
+
+  ion-grid > ion-row > ion-col > .avatar-format > ion-icon {
+    font-size: 50px !important;
+  }
+
+  ion-grid > ion-row > ion-col > .avatar-text {
+    color: color($colors, primary-color-light);
+    font-weight: 800;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin: 20px auto;
+  }
+
+  .btn-logout {
+    color: color($colors, light);
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  .btn-logout:hover {
+    transition: .5s;
+    background: color($colors, primary-color-light) !important;
+  }
+
+  ion-grid > ion-row > ion-col > .btn-logout > span {
+    padding-right: 10px;
+  }
+
+  ion-grid > ion-row > ion-col > button > ion-icon {
+    padding: 10px;
+  }
+
+}
+.bg-content {
+  ion-list > button {
+    background: color($colors, light);
+  }
+  ion-list > button:hover{
+    transition: .5s;
+    background: color($colors, primary-color-light);
+  }
+}
+.header{
+  ion-title {
+    font-size: 20px !important;
+  }
+}
+.card-background-page {
+
+  ion-card {
+    position: relative;
+    text-align: center;
+    height: 200px !important;
+  }
+
+  .card-title {
+    position: absolute;
+    top: 36%;
+    width: 100%;
+    background: color($colors, dark);
+  }
+
+  .card-title>h5 {
+    font-size:  1.25em;
+    color: color($colors, primary-color-light);
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  .card-subtitle {
+    font-size: 1.40em;
+    width: 100%;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    background:color($colors, light);
+  }
+  .bg-info {
+    background: color($colors, primary);
+  }
+  .align-bottom {
+    position: absolute;
+    bottom: 0;
+  }
+  .round {
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  .card-text {
+    font-size: 15px !important;
+    color: color($colors, dark);
+    padding: 5px;
+  }
+}
+/*PAGE DESCRIÇÃO*/
+.background-page {
+  .icon-color {
+    color: color($colors, dark);
+    padding-right: 5px;
+    font-weight: 500;
+  }
+
+  .bg-list {
+    width: 100%;
+    height: auto;
+    background: color($colors, light);
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+  }
+
+  .list-format {
+    list-style: none;
+  }
+  .list-format > ion-row > ion-col > li {
+    color: color($colors, primary-text-color);
+    letter-spacing: 1px;
+    font-size: 14px;
+  }
+  .text-title {
+    padding: 20px 16px;
+    font-weight: 500;
+    font-size: 16px;
+    color: color($colors, dark);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+ion-card {
+  ion-col {
+    color: color($colors, primary-text-color);
+    letter-spacing: 1px;
+    font-size: 14px;
+  }
+  ion-card-title {
+    padding: 20px 16px;
+    font-weight: 500;
+    font-size: 18px !important;
+    color: color($colors, dark) !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+/*
+*
+* GOOGLE MAPS
+*/
+.localizacao {
+  #map {
+     padding: 10px 10px !important;
+  }
+  h2 {
+    font-weight: 500;
+    font-size: 18px !important;
+    color: color($colors, dark) !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  span {
+    font-size: 14px;
+    font-weight: 400;
+    color: color($colors, primary-text-color);
+    letter-spacing: 1px;
+  }
+}
+
+.btn-selector {
+  button {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+}
