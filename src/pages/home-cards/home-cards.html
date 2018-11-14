@@ -12,35 +12,37 @@
 
 <ion-content class="card-background-page no-scroll">
   <!-- cards apartamentos -->
-  <ion-item *ngFor="let apart of apart" tappable (click)="pushDesc(apart.id)">
-    <ion-card>
-      <img [src]="apart.thumb" alt=""/>
-      <div class="card-title">
-        <h5>{{ apart.name }}</h5>
-      </div>
-      <div class="card-subtitle align-bottom">
 
-        <ion-grid no-padding>
-          <ion-row>
-            <ion-col col-4>
-                <ion-icon name="home" class="card-text" >
-                  <span> {{ apart.tipo }} </span>
-                </ion-icon>
-            </ion-col>
-            <ion-col col-4>
-                <ion-icon name="trending-down" class="card-text">
-                  <span> {{ apart.area }} m² </span>
-                </ion-icon>
-            </ion-col>
-            <ion-col col-4>
-                <ion-icon name="filing" class="card-text">
-                  <span> {{ apart.qtd_quartos }} </span>
-                </ion-icon>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
+  <div *ngFor="let apart of apartamento" (click)='openApartamento(apart.codigoanuncio)' class="test">
+    <ion-card no-margin no-padding>
+      <img [src]="apart.foto1" alt="" class="img-margin">
+
+      <div class="card-title" text-left>
+        <h5>{{ apart.codigoanuncio }}</h5>
       </div>
+
+      <div class="card-bottom-status" text-left>
+       <strong><span>Livre</span></strong>
+      </div>
+      <div class="card-bottom-left">
+        <div float-left class="icon-contacts">
+          <ion-icon name="contacts"></ion-icon>
+          <span>{{ apart.pessoas }}</span>
+        </div>
+        <div float-left class="icon-filing">
+          <ion-icon name="filing"></ion-icon>
+          <span>{{ apart.quartos }}</span>
+        </div>
+        <div float-left class="icon-star">
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+          </div>
+      </div>
+
     </ion-card>
-</ion-item>
+  </div>
 
 </ion-content>

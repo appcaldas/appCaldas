@@ -1,0 +1,19 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>
+      Descrição
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list *ngFor="let apart of aparts">
+    <ion-item>
+      {{ apart.titulo }}
+      <img [src]="apart.foto1" alt="">
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,5 +1,52 @@
 page-home-cards {
-    .no-scroll .scroll-content{
-        
-      }
+  .card-background-page {
+    ion-card {
+      position: relative;
+      text-align: center;
+      width: 100%;
+    }
+
+    .img-margin {
+      padding: 2px 2px;
+    }
+
+    .icon-contacts {
+      color: #ffffff;
+      font-size: 10px;
+      letter-spacing: 1px;
+      padding-left: 10px;
+    }
+
+    .icon-contacts span {
+      text-transform: uppercase;
+    }
+
+    .icon-filing {
+      color: #ffffff;
+      font-size: 10px;
+      letter-spacing: 1px;
+      padding: 0px 8px;
+    }
+    .icon-star {
+      color: #FFEB3B;
+      font-size: 10px;
+      padding-left: 5px;
+    }
+    // .card-title {
+    //   position: absolute !important;
+    //   top: 36%;
+    //   font-size: 2.0em;
+    //   width: 100%;
+    //   font-weight: bold;
+    //   color: #a0a0a0a0;
+    // }
+
+    // .card-subtitle {
+    //   font-size: 1.0em;
+    //   position: absolute;
+    //   top: 52%;
+    //   width: 100%;
+    //   color: #a0a0a0a0;
+    // }
+  }
 }

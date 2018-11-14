@@ -1,30 +1,54 @@
-import { ApService } from './../services/apart-service';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 
-import { DescricaoApPage } from '../descricao-ap/descricao-ap';
+import { ApartamentosProvider } from '../../providers/apartamentos/apartamentos';
 
 @IonicPage()
 @Component({
   selector: 'page-home-cards',
   templateUrl: 'home-cards.html',
-  providers: [ApService]
+  providers: [ApartamentosProvider]
 })
 export class HomeCardsPage {
 
   public apart: any;
+  public apartamento: any[];
+  public page: number;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, apartService: ApService) {
-    this.apart = apartService.getAll();
-    //this.apart = apartService.getItem(navParams.get('navParams'));
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public apartamentosProvider: ApartamentosProvider,
+    public toast: ToastController) {
+
+      this.apart = apartamentosProvider.getAll();
+      this.getAllApartamentos();
+      this.apartamento = [];
+
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad HomeCardsPage');
+  getAllApartamentos() {
+    this.apartamentosProvider.getAll()
+      .then((result: any) => {
+        for(var i = 0; i < result.length; i++) {
+          var apart = result[i];
+          this.apartamento.push(apart);
+        }
+      })
+      .catch((error: any) => {
+         this.toast.create({message: 'Erro ao exibir os apartamentos.', position: 'botton', duration: 3000}).present();
+      });
   }
 
-  // Evento de push para descrição do apartamento
-  pushDesc(id) : void{
-    this.navCtrl.push(DescricaoApPage, {id: id});
+  // exibir detalhe do apartamento por 'id'.
+  openApartamento(codigoanuncio: any) {
+    this.apartamentosProvider.get(codigoanuncio)
+      .then((result: any) => {
+        this.navCtrl.push('DetalheApPage', { apart: result });
+      })
+      .catch((error: any) => {
+        this.toast.create({ message: 'Erro ao recuperar o apartamento. ', position: 'botton', duration: 3000 }).present();
+      });
   }
+
 }
