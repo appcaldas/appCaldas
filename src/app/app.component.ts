@@ -7,7 +7,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { LoginPage } from '../pages/login/login';
 import { timer } from 'rxjs/observable/timer';
-import { HomeCardsPage } from '../pages/home-cards/home-cards';
 
 @Component({
   templateUrl: 'app.html'
@@ -15,8 +14,7 @@ import { HomeCardsPage } from '../pages/home-cards/home-cards';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  // Página que será exibida primeiramente (voltar com LoginPage)
-  rootPage: any = HomeCardsPage;
+  rootPage: any = LoginPage;
 
   showSplash = true;
 

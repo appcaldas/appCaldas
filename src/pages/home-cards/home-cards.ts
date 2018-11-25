@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 
 import { ApartamentosProvider } from '../../providers/apartamentos/apartamentos';
+import { DetalheApPage } from '../detalhe-ap/detalhe-ap';
 
 @IonicPage()
 @Component({
@@ -44,7 +45,7 @@ export class HomeCardsPage {
   openApartamento(codigoanuncio: any) {
     this.apartamentosProvider.get(codigoanuncio)
       .then((result: any) => {
-        this.navCtrl.push('DetalheApPage', { apart: result });
+        this.navCtrl.push(DetalheApPage, { apart: result });
       })
       .catch((error: any) => {
         this.toast.create({ message: 'Erro ao recuperar o apartamento. ', position: 'botton', duration: 3000 }).present();

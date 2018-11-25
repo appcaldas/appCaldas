@@ -35,6 +35,7 @@ ion-menu {
   }
 
 }
+
 .bg-content {
   ion-list > button {
     background: color($colors, light);
@@ -44,6 +45,7 @@ ion-menu {
     background: color($colors, primary-color-light);
   }
 }
+
 .header{
   ion-title {
     font-size: 20px !important;
@@ -73,11 +75,13 @@ ion-menu {
     padding: 2px;
     left: 2px;
   }
+
   .card-bottom-status span {
     text-transform: uppercase;
     color: #212121;
     letter-spacing: 1px;
   }
+
   .card-bottom-left {
     position: absolute;
     top: 88%;
@@ -86,6 +90,7 @@ ion-menu {
     background: rgba(52, 58, 64, 0.8);
     padding: 8px 0px;
   }
+
   .card-title > h5 {
     font-size:  1.25em;
     color: #FFFFFF;
@@ -100,23 +105,28 @@ ion-menu {
     text-transform: uppercase;
     background:color($colors, light);
   }
+
   .bg-info {
     background: color($colors, primary);
   }
+
   .align-bottom {
     position: absolute;
     bottom: 0;
   }
+
   .round {
     border-radius: 1rem;
     overflow: hidden;
   }
+
   .card-text {
     font-size: 15px !important;
     color: color($colors, dark);
     padding: 5px;
   }
 }
+
 /*PAGE DESCRIÇÃO*/
 .background-page {
   .icon-color {
@@ -135,11 +145,13 @@ ion-menu {
   .list-format {
     list-style: none;
   }
+
   .list-format > ion-row > ion-col > li {
     color: color($colors, primary-text-color);
     letter-spacing: 1px;
     font-size: 14px;
   }
+
   .text-title {
     padding: 20px 16px;
     font-weight: 500;
@@ -156,6 +168,7 @@ ion-card {
     letter-spacing: 1px;
     font-size: 14px;
   }
+
   ion-card-title {
     padding: 20px 16px;
     font-weight: 500;
@@ -165,28 +178,7 @@ ion-card {
     letter-spacing: 1px;
   }
 }
-/*
-*
-* GOOGLE MAPS
-*/
-.localizacao {
-  #map {
-     padding: 10px 10px !important;
-  }
-  h2 {
-    font-weight: 500;
-    font-size: 18px !important;
-    color: color($colors, dark) !important;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  span {
-    font-size: 14px;
-    font-weight: 400;
-    color: color($colors, primary-text-color);
-    letter-spacing: 1px;
-  }
-}
+
 
 .btn-selector {
   button {
@@ -194,4 +186,45 @@ ion-card {
     font-weight: 600;
     letter-spacing: 1px;
   }
+}
+
+/* ESTILOS DOS DETALHES */
+
+.info-format h2 {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #B0ACAF;
+}
+
+.info-format p {
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  color: #B0ACAF;
+}
+
+.info-format .icon-ambiente ion-icon {
+  color: #6200EE;
+  font-size: 30px;
+}
+
+.info-format .icon-ambiente p {
+  font-size: 10px;
+}
+
+.info-format .icon-info ion-icon {
+  color: #6200EE;
+}
+
+.icon-edit-color ion-col ion-icon, .icon-edit-color ion-icon {
+  font-size: 18px;
+  padding-right: 5px;
+}
+
+.icon-star {
+  color: #FFEB3B;
+  font-size: 10px;
+  padding-left: 5px;
 }

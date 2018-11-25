@@ -1,0 +1,60 @@
+<ion-content no-margin *ngFor="let apart of apartamento">
+  <div no-margin no-padding>
+    <img [src]="maps" alt="Maps">
+    <div class="card-maps">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-12>
+            <h2 no-margin>{{ apart.titulo }}</h2>
+          </ion-col>
+          <ion-col col-12>
+            <p no-margin>{{ apart.endereco }}, {{ apart.cidade }} - {{ apart.uf }} </p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+  <div class="googlemap">
+  </div>
+  <ion-grid>
+      <ion-row class="info-format">
+        <ion-col col-12>
+          <h2 text-center>Ambiente</h2>
+        </ion-col>
+        <ion-col col-4 text-center class="icon-ambiente">
+          <ion-icon name="filing"></ion-icon>
+          <p>Quartos: {{ apart.quartos }}</p>
+        </ion-col>
+
+        <ion-col col-4 text-center class="icon-ambiente">
+          <ion-icon name="game-controller-b"></ion-icon>
+          <p>Lazer: {{ apart.lazer }}</p>
+        </ion-col>
+
+        <ion-col col-4 text-center class="icon-ambiente">
+          <ion-icon name="water"></ion-icon>
+          <p>Piscina: {{ apart.piscina }}</p>
+        </ion-col>
+
+        <ion-col col-6 text-center class="icon-ambiente">
+          <ion-icon name="unlock"></ion-icon>
+          <p>Portaria: {{ apart.portaria }}</p>
+        </ion-col>
+
+        <ion-col col-6 text-center class="icon-ambiente">
+          <ion-icon name="md-contacts"></ion-icon>
+          <p>{{ apart.pessoas }}</p>
+        </ion-col>
+
+        <ion-col col-3 text-center class="icon-ambiente">
+          <ion-icon></ion-icon>
+          <p></p>
+        </ion-col>
+        </ion-row>
+        <button ion-button outline block (click)="popPage()" class="icon-edit-color">
+            <ion-icon name="ios-arrow-round-back-outline"></ion-icon>
+            Voltar
+          </button>
+  </ion-grid>
+
+</ion-content>

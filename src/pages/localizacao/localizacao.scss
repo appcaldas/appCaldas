@@ -1,0 +1,25 @@
+page-localizacao {
+
+  /*Google maps */
+  .googlemaps {
+    height: 200px !important;
+    max-width: 100%;
+  }
+  .card-maps {
+    background: color($colors, primary);
+  }
+
+  .card-maps h2 {
+    color: #FFFFFF;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+
+  .card-maps p {
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    font-weight: 400;
+  }
+}

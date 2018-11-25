@@ -1,19 +1,160 @@
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>
-      Descrição
-    </ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-  <ion-list *ngFor="let apart of aparts">
+ <!--<ion-list *ngFor="let apart of aparts">
     <ion-item>
       {{ apart.titulo }}
-      <img [src]="apart.foto1" alt="">
     </ion-item>
-  </ion-list>
-</ion-content>
+  </ion-list>-->
+
+  <ion-header no-border transparent>
+    <ion-navbar transparent>
+      <ion-title text-center>
+        Detalhes
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+
+  <ion-content style="padding: 3px;" *ngFor="let apart of aparts">
+    <ion-fab top right>
+      <button ion-fab mini color="primary" (click)="pushMaps(apart)">
+        <ion-icon  name="ios-pin-outline"></ion-icon>
+      </button>
+    </ion-fab>
+    <ion-slides pager class="slide-fomart" no-margin no-padding>
+
+      <ion-slide>
+        <img [src]="apart.foto1" class="img-bg" alt="" no-margin no-padding>
+        <h2>{{ apart.titulo }}</h2>
+        <div float-left class="icon-star">
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+        </div>
+      </ion-slide>
+
+    </ion-slides>
+    <ion-card >
+      <ion-grid>
+        <!-- Valores e Prazos -->
+        <ion-row class="preco-color" margin-bottom>
+          <ion-col col-3 >
+            <span text-uppercase>Preço</span>
+          </ion-col>
+          <ion-col col-9>
+            <span float-right>{{ apart.preco | currency:'BRL' }}</span>
+          </ion-col>
+        </ion-row>
+
+        <!-- Descrição -->
+        <ion-row class="info-format">
+          <ion-col col-12 class="title-card">
+            <h2 no-margin>Descrição</h2>
+          </ion-col>
+          <ion-col col-12>
+            <p>{{ apart.conteudo }}</p>
+          </ion-col>
+        </ion-row>
+
+        <!-- Informações do ambiente -->
+        <ion-row class="info-format">
+          <ion-col col-12>
+            <h2>Ambiente</h2>
+          </ion-col>
+          <ion-col col-4 text-center class="icon-ambiente">
+            <ion-icon name="filing"></ion-icon>
+            <p>Quartos: {{ apart.quartos }}</p>
+          </ion-col>
+
+          <ion-col col-4 text-center class="icon-ambiente">
+            <ion-icon name="game-controller-b"></ion-icon>
+            <p>Lazer: {{ apart.lazer }}</p>
+          </ion-col>
+
+          <ion-col col-4 text-center class="icon-ambiente">
+            <ion-icon name="water"></ion-icon>
+            <p>Piscina: {{ apart.piscina }}</p>
+          </ion-col>
+
+          <ion-col col-6 text-center class="icon-ambiente">
+            <ion-icon name="unlock"></ion-icon>
+            <p>Portaria: {{ apart.portaria }}</p>
+          </ion-col>
+
+          <ion-col col-6 text-center class="icon-ambiente">
+            <ion-icon name="md-contacts"></ion-icon>
+            <p>{{ apart.pessoas }}</p>
+          </ion-col>
+
+          <ion-col col-3 text-center class="icon-ambiente">
+            <ion-icon></ion-icon>
+            <p></p>
+          </ion-col>
+
+        </ion-row>
+
+        <!-- Contato -->
+        <ion-row class="info-format">
+          <ion-col col-12>
+            <h2>Mais informações</h2>
+          </ion-col>
+        </ion-row>
+
+        <!-- Marcador -->
+        <ion-row class="info-format">
+          <ion-col col-1 class="icon-info">
+            <ion-icon name="ios-pin-outline" ></ion-icon>
+          </ion-col>
+          <ion-col col-11>
+            <p>{{ apart.endereco }}, {{ apart.cidade }} - {{ apart.uf }} </p>
+          </ion-col>
+        </ion-row>
+
+        <!-- Web Site -->
+        <ion-row class="info-format">
+          <ion-col col-1 class="icon-info">
+            <ion-icon name="ios-globe-outline"></ion-icon>
+          </ion-col>
+          <ion-col col-11>
+            <p>espaco10.com.br</p>
+          </ion-col>
+        </ion-row>
+
+        <!-- Telefone para contato -->
+        <ion-row class="info-format">
+          <ion-col col-1 class="icon-info">
+            <ion-icon name="ios-call-outline"></ion-icon>
+          </ion-col>
+          <ion-col col-11>
+            <p>(61) 9 9999-8888</p>
+          </ion-col>
+        </ion-row>
+
+        <!-- Status -->
+        <ion-row>
+          <ion-col col-12 class="info-format">
+          <ion-list>
+            <h2 margin-top>Status</h2>
+            <ion-item>
+              <ion-label no-margin >{{ status }}</ion-label>
+              <ion-toggle color="danger" (ionChange)="presentAlertStatus($event)"></ion-toggle>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+    <ion-grid>
+      <ion-row class="icon-edit-color">
+        <ion-col col-6>
+          <button ion-button block outline small color="secondary">
+            <ion-icon name="ios-create-outline"></ion-icon>
+            Editar</button>
+        </ion-col>
+        <ion-col col-6>
+          <button ion-button block outline small color="danger">
+            <ion-icon name="ios-close-outline"></ion-icon>
+            Apagar</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>

@@ -16,6 +16,8 @@ import { EditarApPage } from '../pages/editar-ap/editar-ap';
 import { InfoperfilPage } from '../pages/infoperfil/infoperfil';
 import { ApartamentosProvider } from '../providers/apartamentos/apartamentos';
 import { UsersProvider } from '../providers/users/users';
+import { DetalheApPage } from '../pages/detalhe-ap/detalhe-ap';
+import { LocalizacaoPage } from '../pages/localizacao/localizacao';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { UsersProvider } from '../providers/users/users';
     InfoperfilPage,
     ApagaimovelPage,
     AlteradadosPage,
-    EditarApPage
+    EditarApPage,
+    DetalheApPage,
+    LocalizacaoPage
   ],
   imports: [
     BrowserModule,
@@ -43,7 +47,9 @@ import { UsersProvider } from '../providers/users/users';
     InfoperfilPage,
     ApagaimovelPage,
     AlteradadosPage,
-    EditarApPage
+    EditarApPage,
+    DetalheApPage,
+    LocalizacaoPage
   ],
   providers: [
     StatusBar,
