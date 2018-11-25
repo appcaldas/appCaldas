@@ -1,4 +1,5 @@
-import { TabsPage } from './../tabs/tabs';
+import { HomeCardsPage } from './../home-cards/home-cards';
+
 
 import { UsersProvider } from './../../providers/users/users';
 import { Component } from '@angular/core';
@@ -33,7 +34,7 @@ export class LoginPage {
       .then((result: any) =>{
         if(result.id != null){
         this.toast.create({message: 'Usuário logado com sucesso', position:'bottom', duration:3000}).present();
-        this.navCtrl.setRoot(TabsPage)
+        this.navCtrl.setRoot(HomeCardsPage)
         }
         else{
           this.toast.create({message: 'Erro: '+result.status+' '+result.mensagem,position:'bottom', duration:3000}).present();

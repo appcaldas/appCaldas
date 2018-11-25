@@ -1,6 +1,5 @@
 import { DetalheReservaPage } from './../pages/detalhereserva/detalhereserva';
 import { ReservasPage } from './../pages/reservas/reservas';
-import { TabsPage } from './../pages/tabs/tabs';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -24,7 +23,7 @@ import { ReservaProvider } from '../providers/reserva/reserva';
   declarations: [
     MyApp,
     HomeCardsPage,
-    TabsPage,
+    
     LoginPage,
     InfoperfilPage,
     ApagaimovelPage,
@@ -44,7 +43,7 @@ import { ReservaProvider } from '../providers/reserva/reserva';
   entryComponents: [
     MyApp,
     HomeCardsPage,
-    TabsPage,
+   
     LoginPage,
     InfoperfilPage,
     ApagaimovelPage,

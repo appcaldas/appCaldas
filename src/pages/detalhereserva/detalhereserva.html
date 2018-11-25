@@ -47,10 +47,10 @@
               <ion-icon name="cash"></ion-icon>
               Valores
               <span class="itemP">
-                Total: <span class="text-primary">{{reserva.valorTotal | currency:'CAD':'symbol-narrow':'4.2-2'}}</span>
+                Total: <span class="text-primary">{{reserva.valorTotal | currency: 'BRL'}}</span>
               </span>
               <span class="itemP">
-                Pago: <span class="text-primary">{{reserva.valorPago | currency:'CAD':'symbol-narrow':'4.2-2'}}</span>
+                Pago: <span class="text-primary">{{reserva.valorPago |  currency: 'BRL'}}</span>
               </span>
               <span class="itemP">
                 Restante: <span class="text-primary">{{reserva.valorTotal - reserva.valorPago| currency:'CAD':'symbol-narrow':'4.2-2'}}</span>

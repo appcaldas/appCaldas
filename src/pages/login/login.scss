@@ -4,12 +4,7 @@ page-login {
   }
 
 
-  @font-face {
-    font-family: Dolcetto;
-    src: url(../../assets/fonts/Dolcetto.ttf) format("ttf");
-    
-    }
-    
+  
   .logItem{
      margin-top: 30vh;
      background-color: rgba($color: color($colors, primary), $alpha: 0.4)
@@ -26,8 +21,9 @@ page-login {
       z-index: -1;
   }
   .title{
-    font-family: Dolcetto !important;
-    font-size: 60px !important;
+    font-family: 'tahoma', sans-serif !important;
+    font-size: 30px !important;
+    color: white;
   }
   .card{
       border-radius: 20px;
