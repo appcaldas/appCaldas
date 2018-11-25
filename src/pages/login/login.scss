@@ -3,8 +3,16 @@ page-login {
     overflow: hidden;
   }
 
+
+  @font-face {
+    font-family: Dolcetto;
+    src: url(../../assets/fonts/Dolcetto.ttf) format("ttf");
+    
+    }
+    
   .logItem{
-     margin-top: 30vh
+     margin-top: 30vh;
+     background-color: rgba($color: color($colors, primary), $alpha: 0.4)
   }
   .bgImg{
       background-image: url('../assets/imgs/bg.jpg');
@@ -17,10 +25,14 @@ page-login {
       filter: blur(5px);
       z-index: -1;
   }
-  
+  .title{
+    font-family: Dolcetto !important;
+    font-size: 60px !important;
+  }
   .card{
       border-radius: 20px;
       position: absolute;
       z-index: 10;
+      // background-color: rgba(255,255,255,0.6);
   }
 }

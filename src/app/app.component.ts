@@ -1,5 +1,4 @@
 import { ReservasPage } from './../pages/reservas/reservas';
-import { EditarApPage } from './../pages/editar-ap/editar-ap';
 import { InfoperfilPage } from './../pages/infoperfil/infoperfil';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform} from 'ionic-angular';
@@ -27,7 +26,7 @@ export class MyApp {
     // formatação das páginas que aparecem no Menu
     this.pages = [
       { title: 'Lista de Reservas', component: ReservasPage, icon: 'home'},
-      { title: 'Perfil', component: InfoperfilPage, icon: 'home' }
+      { title: 'Ajuda', component: InfoperfilPage, icon: 'information-circle' }
     ];
   }
 

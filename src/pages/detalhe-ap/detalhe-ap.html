@@ -145,13 +145,8 @@
     </ion-card>
     <ion-grid>
       <ion-row class="icon-edit-color">
-        <ion-col col-6>
-          <button ion-button block outline small color="secondary">
-            <ion-icon name="ios-create-outline"></ion-icon>
-            Editar</button>
-        </ion-col>
-        <ion-col col-6>
-          <button ion-button block outline small color="danger">
+        <ion-col col-12>
+          <button ion-button block outline small color="danger" (click)="pushDelete(apart)">
             <ion-icon name="ios-close-outline"></ion-icon>
             Apagar</button>
         </ion-col>

@@ -4,15 +4,17 @@ page-infoperfil {
   }
 
   .card-user{
-      margin-top: 0vh;
-      border-radius: 30px
+      margin-left: 20%;
+      border-radius: 30px;
+     
   }
   .imagemUser{
       border-radius: 70%;
       height: 200px;
       width: 200px;
       margin: 0 auto;
-      margin-top: 2vh
+      margin-top: 2vh;
+      border: 5px solid color($colors, primary) !important;
   }
   .cards-info{
       width: 90%;
@@ -34,5 +36,21 @@ page-infoperfil {
       width: 100%;
       position: relative;
   }
-
+  .text-perf{
+    text-align: center;
+    margin-left: 4%;
+    letter-spacing: 2px;
+    margin-top: 10px;
+  }
+  .destaque{
+      background-color: rgba(color($colors, primary), 0.6);
+      border-radius: 5px;
+      padding: 3px;
+  }
+  .hr {
+    border-bottom: 1px solid color($colors, primary);
+    margin: 10px 0;
+    width: 100%;
+  }
+  
 }

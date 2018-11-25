@@ -9,27 +9,27 @@
 
 
   <ion-content padding>
-    <ion-card>
+    <ion-card *ngFor="let apart of apartamento"> 
       <div class="escurecer">
-        <img src="../../assets/imgs/ap2.jpg" height="200px" >
+        <img src="{{apart.foto1}}" height="40%" >
       </div>
-        <div class="card-title">Apartamento Sea Privê</div>
-      <div class="card-subtitle">
-          Ao apagar um item ele é inativado e posteriormente pode ser ativado novamente.
-      </div>
-    </ion-card>
+        <div class="card-title">{{apart.titulo}}</div>
+
       <ion-list>
           <ion-list-header text-center class="titulo" >
             Demais Dados
           </ion-list-header>
-          <ion-item><b>Endereço:</b> Rua teste número 12</ion-item>
-          <ion-item><b>Número de quartos:</b> 3</ion-item>
-          <ion-item><b>Última Reserva:</b> 03/09/2018</ion-item>
+          <ion-item><b>Endereço:</b> {{apart.endereco}}</ion-item>
+          <ion-item><b>Número de quartos:</b> {{apart.quartos}}</ion-item>
+          <ion-item><b>Capacidade:</b> {{apart.pessoas}}</ion-item>
+
         </ion-list>
-    <button ion-button full color="danger">
+    <button ion-button full color="danger" (click)="apagaAp(apart.codigoanuncio)">
       Apagar &nbsp; <ion-icon name='trash'></ion-icon>
     </button>
     <ion-card class="aviso">
       OBS.: Apartamentos alugados não podem ser inativados!
     </ion-card>
+  </ion-card>
+
   </ion-content>

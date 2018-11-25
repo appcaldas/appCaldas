@@ -13,8 +13,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomeCardsPage } from '../pages/home-cards/home-cards';
 import { LoginPage } from '../pages/login/login';
 import { ApagaimovelPage } from '../pages/apagaimovel/apagaimovel';
-import { AlteradadosPage } from '../pages/alteradados/alteradados';
-import { EditarApPage } from '../pages/editar-ap/editar-ap';
 import { InfoperfilPage } from '../pages/infoperfil/infoperfil';
 import { ApartamentosProvider } from '../providers/apartamentos/apartamentos';
 import { UsersProvider } from '../providers/users/users';
@@ -30,8 +28,6 @@ import { ReservaProvider } from '../providers/reserva/reserva';
     LoginPage,
     InfoperfilPage,
     ApagaimovelPage,
-    AlteradadosPage,
-    EditarApPage,
     DetalheApPage,
     LocalizacaoPage,
     ReservasPage
@@ -52,8 +48,6 @@ import { ReservaProvider } from '../providers/reserva/reserva';
     LoginPage,
     InfoperfilPage,
     ApagaimovelPage,
-    AlteradadosPage,
-    EditarApPage,
     DetalheApPage,
     LocalizacaoPage,
     ReservasPage

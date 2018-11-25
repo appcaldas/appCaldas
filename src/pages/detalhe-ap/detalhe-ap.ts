@@ -1,6 +1,9 @@
+import { ApagaimovelPage } from './../apagaimovel/apagaimovel';
+import { ApartamentosProvider } from './../../providers/apartamentos/apartamentos';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, ToastController } from 'ionic-angular';
 import { LocalizacaoPage } from '../localizacao/localizacao';
+
 
 
 
@@ -17,8 +20,9 @@ export class DetalheApPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    public alertCtrl: AlertController
-    //public apartamentos: ApartamentosProvider
+    public alertCtrl: AlertController,
+    //public apartamentosProvider: ApartamentosProvider,
+    public toast: ToastController
     ) {
       this.aparts = this.navParams.get('apart');
   }
@@ -65,5 +69,7 @@ public presentAlertStatus(event) {
 public pushMaps(apart: any[]) {
   this.navCtrl.push(LocalizacaoPage, {apart});
 }
-
+public pushDelete(apart: any[]) {
+  this.navCtrl.push(ApagaimovelPage, {apart});
+}
 }

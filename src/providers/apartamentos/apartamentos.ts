@@ -8,7 +8,7 @@ import 'rxjs/add/operator/map';
 export class ApartamentosProvider {
 
   private API_URL = "http://espaco10.000webhostapp.com/menuws.php";
-
+  private DELETE_URL =  "http://espaco10.000webhostapp.com/apagarws.php/";
   constructor(public http: Http) { }
 
   // retorna todos apartamentos em formato JSON
@@ -38,6 +38,18 @@ export class ApartamentosProvider {
         (error) => {
           reject(error.json());
         });
+    })
+  }
+  delete(id){
+    return new Promise((resolve,reject)=> {
+      let apagarUrl = this.DELETE_URL + id;
+      this.http.get(apagarUrl)
+      .subscribe((result:any)=> {
+        resolve(result.json());
+      },
+      (error)=> {
+        reject(error.json());
+      });
     })
   }
 }
