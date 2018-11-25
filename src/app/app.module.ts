@@ -1,3 +1,5 @@
+import { DetalheReservaPage } from './../pages/detalhereserva/detalhereserva';
+import { ReservasPage } from './../pages/reservas/reservas';
 import { TabsPage } from './../pages/tabs/tabs';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -18,6 +20,7 @@ import { ApartamentosProvider } from '../providers/apartamentos/apartamentos';
 import { UsersProvider } from '../providers/users/users';
 import { DetalheApPage } from '../pages/detalhe-ap/detalhe-ap';
 import { LocalizacaoPage } from '../pages/localizacao/localizacao';
+import { ReservaProvider } from '../providers/reserva/reserva';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { LocalizacaoPage } from '../pages/localizacao/localizacao';
     AlteradadosPage,
     EditarApPage,
     DetalheApPage,
-    LocalizacaoPage
+    LocalizacaoPage,
+    ReservasPage
+    
+    
   ],
   imports: [
     BrowserModule,
@@ -49,7 +55,8 @@ import { LocalizacaoPage } from '../pages/localizacao/localizacao';
     AlteradadosPage,
     EditarApPage,
     DetalheApPage,
-    LocalizacaoPage
+    LocalizacaoPage,
+    ReservasPage
   ],
   providers: [
     StatusBar,
@@ -57,7 +64,8 @@ import { LocalizacaoPage } from '../pages/localizacao/localizacao';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ApService,
     ApartamentosProvider,
-    UsersProvider
+    UsersProvider,
+    ReservaProvider
   ]
 })
 export class AppModule {}

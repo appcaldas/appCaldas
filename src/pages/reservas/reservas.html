@@ -1,0 +1,42 @@
+<ion-header>
+
+  <ion-navbar class="header" color="primary">
+    <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    <ion-title text-uppercase>Reservas</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class='no-scroll'>
+  <!-- cards apartamentos -->
+
+  <div *ngFor="let reservaV of reserva" id="test">
+    <ion-card class='reserva card-1'>
+      
+        <ion-item>
+            <ion-icon name="home"></ion-icon>
+            <span>Imóvel</span>
+            <ion-badge color="secondary">{{reservaV.titulo}}</ion-badge><br>
+            <ion-avatar item-end>
+              <div class="imgC"></div> 
+            </ion-avatar>
+            <ion-icon name="person"></ion-icon>
+            <span>Cliente</span>
+            <ion-badge color="secondary">{{reservaV.nome}}</ion-badge><br>
+            <ion-icon name="stats"></ion-icon>
+            <span >Status</span>
+            <ion-badge class='card{{reservaV.ativo}}'>{{reservaV.ativo}}</ion-badge><br>
+            <ion-icon name="calendar"></ion-icon>
+            <span >Entrada</span>
+            <ion-badge >{{reservaV.dataE | date: 'dd/MM/yyyy'}}</ion-badge><br>
+          </ion-item>
+          <ion-list>
+              <button ion-button  block class='btn' (click)='openReserva(reservaV.id_reserva)'>Detalhes {{reservaV.id}}</button>
+            </ion-list>
+          </ion-card>
+  </div>
+
+</ion-content>

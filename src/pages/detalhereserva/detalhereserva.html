@@ -1,0 +1,67 @@
+<ion-header>
+
+  <ion-navbar class="header" color="primary">
+    <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    <ion-title text-uppercase>Reservas</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div *ngFor="let reserva of reservas" id="test">
+    <ion-card class='reserva card-1'>
+      <img src="https://espaco10.000webhostapp.com/{{reserva.foto1}}" alt="">
+      <div class="card-status">
+          <strong>
+              <span class='card{{reserva.ativo}}' *ngIf="reserva.ativo == 1">
+                  Ativo
+                </span>
+                <span class='card{{reserva.ativo}}' *ngIf="reserva.ativo == 0">
+                  Inativo
+                </span>
+          </strong>
+         </div>
+        <ion-card-header>
+          <ion-card-title>
+            {{reserva.titulo}}  | #<span class="text-primary">{{reserva.id_reserva}}</span>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content class="fontB">
+            Cliente:
+            <span class="text-primary">{{reserva.nome}}</span>
+            <br>
+            <div class="conj">
+              <ion-icon name="calendar"></ion-icon>
+              Datas
+              <span class="itemP">
+                Entrada: <span class="text-primary">{{reserva.dataE | date: 'dd/MM/yyyy'}}</span>
+              </span>
+              <span class="itemP">
+                  Saída: <span class="text-primary">{{reserva.dataS | date: 'dd/MM/yyyy'}}</span>
+              </span>
+            </div>
+            <div class="conj">
+              <ion-icon name="cash"></ion-icon>
+              Valores
+              <span class="itemP">
+                Total: <span class="text-primary">{{reserva.valorTotal | currency:'CAD':'symbol-narrow':'4.2-2'}}</span>
+              </span>
+              <span class="itemP">
+                Pago: <span class="text-primary">{{reserva.valorPago | currency:'CAD':'symbol-narrow':'4.2-2'}}</span>
+              </span>
+              <span class="itemP">
+                Restante: <span class="text-primary">{{reserva.valorTotal - reserva.valorPago| currency:'CAD':'symbol-narrow':'4.2-2'}}</span>
+              </span>
+            </div>
+            <ion-list>
+                <button ion-button  block class='btn' (click)='finalizarReserva("a/" + reserva.id_reserva)' *ngIf="reserva.ativo == 0">Reativar</button>
+              <button ion-button  block class='btn' (click)='finalizarReserva("f/" + reserva.id_reserva)' *ngIf="reserva.ativo == 1">Finalizar</button>
+            </ion-list>
+        </ion-card-content>  
+    </ion-card>
+  </div>
+
+</ion-content>

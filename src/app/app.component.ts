@@ -1,3 +1,4 @@
+import { ReservasPage } from './../pages/reservas/reservas';
 import { EditarApPage } from './../pages/editar-ap/editar-ap';
 import { InfoperfilPage } from './../pages/infoperfil/infoperfil';
 import { Component, ViewChild } from '@angular/core';
@@ -25,7 +26,7 @@ export class MyApp {
 
     // formatação das páginas que aparecem no Menu
     this.pages = [
-      { title: 'Novo Apartamento', component: EditarApPage, icon: 'home'},
+      { title: 'Lista de Reservas', component: ReservasPage, icon: 'home'},
       { title: 'Perfil', component: InfoperfilPage, icon: 'home' }
     ];
   }
