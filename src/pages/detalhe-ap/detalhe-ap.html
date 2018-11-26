@@ -135,8 +135,10 @@
           <ion-list>
             <h2 margin-top>Status</h2>
             <ion-item>
-              <ion-label no-margin >{{ status }}</ion-label>
-              <ion-toggle color="danger" (ionChange)="presentAlertStatus($event)"></ion-toggle>
+              <ion-label no-margin *ngIf="apart.disponivel ==1">Disponível</ion-label>
+              <ion-label no-margin *ngIf="apart.disponivel ==0">Indisponível</ion-label>
+              <ion-toggle color="danger" (ionChange)="presentAlertStatus($event,apart.codigoanuncio)" *ngIf="apart.disponivel ==0" checked></ion-toggle>
+              <ion-toggle color="danger" (ionChange)="presentAlertStatus($event,apart.codigoanuncio)" *ngIf="apart.disponivel ==1"></ion-toggle>
             </ion-item>
           </ion-list>
         </ion-col>

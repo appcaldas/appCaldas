@@ -9,6 +9,7 @@ export class ApartamentosProvider {
 
   private API_URL = "http://espaco10.000webhostapp.com/menuws.php";
   private DELETE_URL =  "http://espaco10.000webhostapp.com/apagarws.php/";
+  private STATUS_URL = "http://espaco10.000webhostapp.com/statusAp.php/";
   constructor(public http: Http) { }
 
   // retorna todos apartamentos em formato JSON
@@ -48,6 +49,18 @@ export class ApartamentosProvider {
         resolve(result.json());
       },
       (error)=> {
+        reject(error.json());
+      });
+    })
+  }
+  trocaStatus(id){
+    return new Promise((resolve,reject) =>{
+      let statusUrl = this.STATUS_URL + id;
+      this.http.get(statusUrl)
+      .subscribe((result:any)=>{
+        resolve(result.json());
+      },
+      (error)=>{
         reject(error.json());
       });
     })
