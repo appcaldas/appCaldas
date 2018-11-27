@@ -191,7 +191,7 @@ ion-card {
 /* ESTILOS DOS DETALHES */
 
 .info-format h2 {
-  font-size: 14px;
+  font-size: 16px;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1px;
@@ -199,7 +199,7 @@ ion-card {
 }
 
 .info-format p {
-  font-size: 12px;
+  font-size: 14px !important;
   letter-spacing: 1px;
   font-weight: 400;
   color: #B0ACAF;
@@ -210,14 +210,14 @@ ion-card {
   font-size: 30px;
 }
 
-.info-format .icon-ambiente p {
-  font-size: 10px;
-}
 
 .info-format .icon-info ion-icon {
   color: #6200EE;
 }
 
+.descricao-format {
+  font-size: 14px;
+}
 .icon-edit-color ion-col ion-icon, .icon-edit-color ion-icon {
   font-size: 18px;
   padding-right: 5px;
