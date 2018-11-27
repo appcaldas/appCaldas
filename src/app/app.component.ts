@@ -7,6 +7,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { LoginPage } from '../pages/login/login';
 import { timer } from 'rxjs/observable/timer';
+import { HomeCardsPage } from '../pages/home-cards/home-cards';
 
 @Component({
   templateUrl: 'app.html'
@@ -14,7 +15,7 @@ import { timer } from 'rxjs/observable/timer';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = LoginPage;
+  rootPage: any = HomeCardsPage;
 
   showSplash = true;
 
